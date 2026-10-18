@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Licensed display font (TWK Lausanne, Weltkern). Kept out of the repo and any
+# public deploy until a per-website licence is held. When absent, the app falls
+# back to the free Work Sans stack.
+public/fonts/TWKLausanne-*.woff2

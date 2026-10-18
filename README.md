@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ihthos website
 
-## Getting Started
+Marketing site for Ihthos, built as a fully static export and deployed to
+GitHub Pages on the custom domain **ihthos.com**.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router, static export)
+- React 19
+- Tailwind CSS 4
+- `motion` for the small amount of decorative motion
+- TypeScript
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The dev server runs on `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+The build writes the static site to `out/`. `next start` is not used: the site
+has no server runtime.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pushes to `main` run `.github/workflows/deploy.yml`, which builds the site and
+publishes `out/` with the official GitHub Pages actions. `public/CNAME` pins the
+custom domain to `ihthos.com`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### DNS records for ihthos.com
 
-## Deploy on Vercel
+Set these at the domain's DNS provider, then enable **Enforce HTTPS** in the
+repository's Pages settings once GitHub has issued the certificate.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Type | Name | Value |
+|---|---|---|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| AAAA | `@` | `2606:50c0:8000::153` |
+| AAAA | `@` | `2606:50c0:8001::153` |
+| AAAA | `@` | `2606:50c0:8002::153` |
+| AAAA | `@` | `2606:50c0:8003::153` |
+| CNAME | `www` | `Ihthos.github.io` |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content
+
+- Public copy lives in `src/lib/site.ts`.
+- Privacy and Terms live in `src/lib/legal.ts`.
+- `notes/CONFIRMATIONS.md` lists facts that must stay unverified until the owner
+  confirms them. Nothing there is rendered on the site.
+- `notes/COMPLETION.md` records what was checked in each pass.
+
+The contact form composes an email in the visitor's own client; nothing is
+posted to a server.
+
+## Fonts
+
+The site is designed around TWK Lausanne, a commercial typeface. Its files are
+excluded from this repository by `.gitignore`, so a deployed build uses the
+Work Sans fallback. Do not commit or publish the licensed files until a
+per-website licence is in place.
