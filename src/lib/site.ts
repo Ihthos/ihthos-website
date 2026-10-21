@@ -666,6 +666,7 @@ export const footer = {
 export const footerNav = [
   { label: "Services", href: "/services" },
   { label: "How it works", href: "/process" },
+  { label: "Guides", href: "/guides" },
   { label: "Boundaries", href: "/boundaries" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

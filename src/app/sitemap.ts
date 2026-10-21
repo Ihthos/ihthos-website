@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { guides } from "@/lib/guides";
 import { siteUrl } from "@/lib/schema";
 
 /* Required by `output: "export"` — the sitemap is rendered once at build. */
@@ -14,6 +15,12 @@ const routes: Array<{
   { path: "/process/", priority: 0.8, changeFrequency: "monthly" },
   { path: "/boundaries/", priority: 0.8, changeFrequency: "monthly" },
   { path: "/about/", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/guides/", priority: 0.7, changeFrequency: "monthly" },
+  ...guides.map((guide) => ({
+    path: `/guides/${guide.slug}/`,
+    priority: 0.6,
+    changeFrequency: "monthly" as const,
+  })),
   { path: "/contact/", priority: 0.7, changeFrequency: "yearly" },
   { path: "/privacy/", priority: 0.2, changeFrequency: "yearly" },
   { path: "/terms/", priority: 0.2, changeFrequency: "yearly" },

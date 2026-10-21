@@ -10,6 +10,14 @@
 - [Boundaries](https://ihthos.com/boundaries/): How scope, access, testing, human review, AI limits, documentation, and ownership are handled.
 - [About](https://ihthos.com/about/): Background and working approach.
 - [Contact](https://ihthos.com/contact/): How to start a conversation about a recurring task or handoff.
+- [Guides](https://ihthos.com/guides/): Plain-language guides on automation patterns, readiness, cost, and custom software decisions.
+
+## Guides
+
+- [AI automation examples for small businesses](https://ihthos.com/guides/ai-automation-examples/): Six common patterns, what changes, and where a person stays involved.
+- [Is your process ready to automate?](https://ihthos.com/guides/automation-readiness/): Seven questions to ask before automating, and the signs a process is not ready yet.
+- [What affects the cost of an AI automation project](https://ihthos.com/guides/ai-automation-cost/): The factors that shape effort, and how to compare proposals.
+- [Custom software or an existing tool?](https://ihthos.com/guides/custom-software-vs-off-the-shelf/): How to decide between a product, an integration, and a custom build.
 - [Privacy](https://ihthos.com/privacy/): Privacy policy.
 - [Terms](https://ihthos.com/terms/): Terms of use.
 
