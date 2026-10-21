@@ -1,0 +1,19 @@
+# Ihthos
+
+> Ihthos is a small studio that builds practical AI automation, workflow integrations, and custom business software for small businesses, with human review kept where decisions matter.
+
+## Pages
+
+- [Home](https://ihthos.com/): What Ihthos does and how it approaches AI automation and custom software.
+- [Services](https://ihthos.com/services/): Workflow assessment, AI automation, system integrations, lead and customer operations, and custom software.
+- [How it works](https://ihthos.com/process/): The project process, from understanding a process through scope, build, review, and handoff.
+- [Boundaries](https://ihthos.com/boundaries/): How scope, access, testing, human review, AI limits, documentation, and ownership are handled.
+- [About](https://ihthos.com/about/): Background and working approach.
+- [Contact](https://ihthos.com/contact/): How to start a conversation about a recurring task or handoff.
+- [Privacy](https://ihthos.com/privacy/): Privacy policy.
+- [Terms](https://ihthos.com/terms/): Terms of use.
+
+## Notes
+
+- Contact: business@ihthos.com
+- Scope is defined project by project; no client names, quotes, or performance metrics are published.

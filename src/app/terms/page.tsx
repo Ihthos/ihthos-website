@@ -8,7 +8,9 @@ import { brand, meta, ogImage } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: meta.terms.title },
   description: meta.terms.description,
+  alternates: { canonical: "/terms/" },
   openGraph: {
+    url: "/terms/",
     title: meta.terms.title,
     description: meta.terms.description,
     images: [ogImage],

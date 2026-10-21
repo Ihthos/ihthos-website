@@ -8,7 +8,9 @@ import { brand, meta, ogImage } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: meta.privacy.title },
   description: meta.privacy.description,
+  alternates: { canonical: "/privacy/" },
   openGraph: {
+    url: "/privacy/",
     title: meta.privacy.title,
     description: meta.privacy.description,
     images: [ogImage],

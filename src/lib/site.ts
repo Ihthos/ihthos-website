@@ -589,37 +589,39 @@ export const contact = {
 /* ------------------------------------------------------------------ meta */
 
 /**
- * Per-route title and description. Written for the page's actual topic, not to
- * repeat a keyword. Kept here so one file holds every public sentence.
+ * Per-route title and description. Each states the page's actual topic. The
+ * home and services lines lead with the two terms the practice is offered
+ * under — AI automation and custom business software — without asserting a
+ * result, client, or superlative the brief has not confirmed.
  */
 export const meta = {
   home: {
-    title: "Ihthos | Practical AI & Workflow Automation for Small Businesses",
+    title: "Ihthos | AI Automation & Custom Business Software",
     description:
-      "Make repetitive business work easier to manage. Ihthos helps small businesses improve workflows with thoughtful automation, useful AI, custom business software, and clear human review.",
+      "Practical AI automation, workflow integrations, and custom business software for small businesses. Ihthos keeps human review where decisions matter.",
   },
   services: {
-    title: "Services | Ihthos Workflow Automation, AI & Custom Software",
+    title: "AI Automation & Custom Software Services | Ihthos",
     description:
-      "Explore workflow assessment, system integrations, AI-assisted processes, lead and customer operations, ongoing improvement, and custom business software from Ihthos.",
+      "Workflow assessment, AI automation, system integrations, lead and customer operations, and custom software for business, delivered by Ihthos.",
   },
   process: {
-    title: "How It Works | Ihthos Automation Projects",
+    title: "How It Works | AI Automation Projects | Ihthos",
     description:
       "See how Ihthos understands a process, agrees on scope, builds and reviews a workflow, and documents the handoff.",
   },
   boundaries: {
-    title: "Boundaries & Responsible Automation | Ihthos",
+    title: "Responsible AI & Automation Boundaries | Ihthos",
     description:
       "Learn how Ihthos scopes access, testing, human review, AI limits, documentation, and workflow ownership.",
   },
   about: {
-    title: "About Ihthos | Practical Workflow Automation",
+    title: "About Ihthos | AI Automation & Custom Software",
     description:
       "Meet Ihthos and learn its practical, process-first approach to AI implementation and workflow automation for small businesses.",
   },
   contact: {
-    title: "Contact Ihthos | Talk Through a Workflow",
+    title: "Contact Ihthos | Discuss AI Automation",
     description:
       "Describe one recurring task or handoff you would like to improve. Ihthos will review the details and discuss a sensible next step.",
   },

@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import { Ambience } from "@/components/ambience";
 import { CursorDot } from "@/components/cursor-dot";
+import { JsonLd } from "@/components/json-ld";
 import { MotionProvider } from "@/components/motion-provider";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { siteGraph, siteUrl } from "@/lib/schema";
 import { brand, meta } from "@/lib/site";
 import "./globals.css";
 
@@ -21,21 +23,33 @@ const workSans = Work_Sans({
 });
 
 /**
- * The domain is not confirmed yet, so metadataBase is only set when a real
- * site URL is provided through the environment. Without it Next would have
- * to invent an absolute base for Open Graph URLs, and the brief forbids
- * publishing an unverified address as fact.
+ * The domain was confirmed by the owner on 2026-10-16, so metadataBase is
+ * always absolute. Canonicals are declared per page rather than here — a
+ * canonical inherited by every route would point them all at the home page.
  */
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-
 export const metadata: Metadata = {
-  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
+  metadataBase: new URL(siteUrl),
   title: {
     default: meta.home.title,
     template: "%s | Ihthos",
   },
   description: meta.home.description,
   applicationName: brand.name,
+  category: "technology",
+  creator: brand.name,
+  publisher: brand.name,
+  authors: [{ name: brand.founder, url: `${siteUrl}/about/` }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     siteName: brand.name,
@@ -51,6 +65,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${workSans.variable} h-full antialiased`}
     >
       <body className="bg-base text-ink flex min-h-full flex-col">
+        <JsonLd data={siteGraph} />
         {/* The hero highlight panels are drawn in by script, so they ship
             hidden. Without JavaScript nothing draws them; show them complete. */}
         <noscript>
