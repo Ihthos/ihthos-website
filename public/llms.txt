@@ -18,6 +18,9 @@
 - [Is your process ready to automate?](https://ihthos.com/guides/automation-readiness/): Seven questions to ask before automating, and the signs a process is not ready yet.
 - [What affects the cost of an AI automation project](https://ihthos.com/guides/ai-automation-cost/): The factors that shape effort, and how to compare proposals.
 - [Custom software or an existing tool?](https://ihthos.com/guides/custom-software-vs-off-the-shelf/): How to decide between a product, an integration, and a custom build.
+- [Data entry automation for small businesses](https://ihthos.com/guides/data-entry-automation/): What copying work can be automated, which records still need a person, and what to fix first.
+- [Lead follow-up automation for small businesses](https://ihthos.com/guides/lead-follow-up-automation/): What follow-up automation can carry, what should stay human, and how to design the handoff.
+- [What is workflow integration?](https://ihthos.com/guides/workflow-integration-explained/): How systems exchange data, how integrations differ from automation and AI, and where they break.
 - [Privacy](https://ihthos.com/privacy/): Privacy policy.
 - [Terms](https://ihthos.com/terms/): Terms of use.
 
